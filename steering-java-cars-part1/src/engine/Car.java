@@ -37,6 +37,10 @@ public class Car extends GameObject {
     public double getSpeed() {
         return m_speed;
     }
+
+    public double getMaxSpeed() {
+        return m_max_velocity;
+    }
     
     public void update(Game game, double delta_t) {
         double controlVariables[] = {0,0,0};
