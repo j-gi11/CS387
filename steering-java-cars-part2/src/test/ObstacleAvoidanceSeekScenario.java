@@ -2,6 +2,7 @@ package test;
 
 import controllers.EmptyController;
 import controllers.KeyboardController;
+import controllers.ObstacleAvoidanceController;
 import engine.Car;
 import engine.Game;
 import engine.GameObject;
@@ -60,7 +61,7 @@ public class ObstacleAvoidanceSeekScenario {
 		GameObject markerRandom = new MarkerRandom(10, Color.green);
 		game.add(markerRandom);
          
-        GameObject car = new Car("graphics/bluecar.png",150,750,-Math.PI/2, new EmptyController());
+        GameObject car = new Car("graphics/bluecar.png",150,750,-Math.PI/2, new ObstacleAvoidanceController(markerRandom));
         game.add(car);
         GameWindow.newWindow(game);
     }
